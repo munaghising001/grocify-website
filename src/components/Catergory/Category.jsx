@@ -10,14 +10,18 @@ const Category = () => {
 const renderCards = category.map(card=>
 {
     return(
-        <div>
+        //card
+        <div className='flex-1 '>
+            {/* Card Image */}
+
             <div>
                 <img src={card.image} />
             </div>
-            <div>
+            {/* Card Content */}
+            <div className='bg-zinc-100 pt-17 p-8 rounded-xl'>
                 <h3>{card.title}</h3>
                 <p>{card.description}</p>
-                <Button/>
+                <Button content ="See ALL"/>
             </div>
         </div>
     )
@@ -25,10 +29,12 @@ const renderCards = category.map(card=>
 )
     return (
         <section>
-            <div className='py-20'>
+            <div className='max-w-[1400px] mx-auto px-10 py-20'>
                 <Heading highlight="Shop" heading="by Category" />
+
                 {/* Category Cards */}
-                <div>
+
+                <div className='flex gap-10'>
                     {renderCards}
                 </div>
             </div>
