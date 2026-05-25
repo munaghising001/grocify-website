@@ -13,7 +13,7 @@ const renderCards = category.map(card=>
 
         //card
 
-        <div className='flex-1 basis-[300px]'>
+        <div className='flex-1 basis-[300px]' key={card.id}>
             
             {/* Card Image */}
 
